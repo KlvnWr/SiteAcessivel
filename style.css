@@ -12,14 +12,13 @@ header {
 
 nav {
     display: flex;
-    align-items: right;
+    justify-content: flex-end; /* Alinhar à direita */
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    align-self: end;
 }
 
 nav ul li {
@@ -38,11 +37,11 @@ main {
 
 .iframe-container {
     margin: 0 auto; 
-  }
+}
 
-  iframe {
+iframe {
     border: none; 
-  }
+}
 
 .required {
     color: red;
@@ -54,8 +53,15 @@ section {
 
 fieldset {
     border: none;
-    padding: 0;
-    margin: 0;
+    padding: 20px; /* Adicionando algum espaço interno */
+    background-color: #f8f9fa; /* Cor de fundo */
+    border-radius: 5px; /* Cantos arredondados */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 25px;
 }
 
 label {
@@ -66,17 +72,29 @@ label {
 input[type="text"],
 input[type="email"],
 textarea {
-    width: 100%;
+    width: calc(100% - 20px); /* Largura com desconto para a margem interna do fieldset */
     padding: 10px;
     margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: none;
+    height: 150px;
 }
 
 button {
     padding: 10px 20px;
-    background-color: #333;
+    background-color: #007bff; /* Cor do botão */
     color: #fff;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3; /* Cor do botão quando o mouse passa por cima */
 }
 
 footer {
